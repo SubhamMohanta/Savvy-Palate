@@ -1,0 +1,655 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'SF Pro Display';
+    src: url('./assets/TrueType/SFProDisplay-Bold.ttf');
+}
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url('./assets/TrueType/SFProDisplay-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'SF Pro Text, Light';
+    src: url('./assets/TrueType/SFProText-Light.ttf');
+}
+
+#first-page {
+    height: 100vh;
+}
+
+#gradient-1{
+        background: linear-gradient(to top,
+        #1E2536 0%, 
+        #111111 100%);
+}
+#sidebar{
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 270px;
+}
+#navigation-menu{
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 50px;
+    height: 204px;
+    z-index: 4;
+}
+
+#navigation-menu #Home:hover::after {
+    font-family: 'SF Pro Text';
+    content: attr(title);
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    color: #121212;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 1;
+    top: 12%;
+    left: calc(100% + 10px); 
+    transform: translateY(-50%);
+    opacity: 1;
+    visibility: visible;
+}
+#navigation-menu #Special:hover::after {
+    font-family: 'SF Pro Text';
+    content: attr(title);
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    color: #121212;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 1;
+    top: 37%;
+    left: calc(100% + 10px); 
+    transform: translateY(-50%);
+    opacity: 1;
+    visibility: visible;
+}
+#navigation-menu #About:hover::after {
+    font-family: 'SF Pro Text';
+    content: attr(title);
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    color: #121212;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 1;
+    top: 62%;
+    left: calc(100% + 10px); 
+    transform: translateY(-50%);
+    opacity: 1;
+    visibility: visible;
+}
+#navigation-menu #Contact:hover::after {
+    font-family: 'SF Pro Text';
+    content: attr(title);
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    color: #121212;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 4;
+    top: 86%;
+    left: calc(100% + 10px); 
+    transform: translateY(-50%);
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s ease-in-out;
+}
+
+#navigation-menu div::after {
+    font-family: 'SF Pro Text';
+    content: attr(title);
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    color: #121212;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 4;
+    left: calc(100% + 10px); 
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+
+#Home{
+    margin-top: 6px;
+    margin-left: 4px;
+    margin-right: 4px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Special, #About, #Contact{
+    margin-top: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Home:hover, #Special:hover, #About:hover, #Contact:hover{
+    cursor: pointer;
+    background-color: #121212;
+    transition: 0.8s ease-in-out;
+}
+
+#Tools-used{
+    position: absolute;
+    background-color: #E4E4E4;
+    border-radius: 50px;
+    display: flex;
+    width: 200px;
+    padding: 4px;
+    margin-left: 6%;
+    margin-top: 1%;
+    font-family: 'SF Pro Text, Light';
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+#html, #css, #js{
+    display: flex;
+    justify-content: center;
+}
+
+#html{
+    margin-left: 6px;
+}
+
+#css{
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#Mid-part{
+    padding-top: 12vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'SF Pro Display';
+}
+#One-text{
+    z-index:0;
+    font-size: 150px;
+    margin-top: -37px;
+    margin-left: -18px;
+    color: #e4e4e4;
+}
+#dish-img{
+    z-index:1;
+    position: absolute;
+    margin-top: 10vh;
+    filter:brightness(80%);
+}
+#remaining-text{
+    line-height: 150px;
+    z-index:2;
+    font-size: 130px;
+    position: absolute;
+    color: #e4e4e4;
+    width: 50vw;
+    text-align: center;
+    padding-top: 11vh;
+}
+
+#Big-text{
+    margin-top: 13px;
+    font-size: 168px;
+}
+
+.bottom {
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 27%;
+    width: 96%;
+}
+
+.search-button-div-large{
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    width: 300px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.button{
+    margin-left: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+#searchBox{
+    width: 220px;
+    height: 40px;
+    margin-left: 10px;
+    padding-left: 15px;
+    border-radius: 50px;
+    border: none;
+}
+#searchBox::placeholder{
+    color: #333333;
+    font-family: 'SF Pro Text';
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+#searchBox:focus{
+    outline: none;
+}
+
+
+#Website{
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    width: 180px;
+    margin-top: 1.3vh;
+    font-family: 'SF Pro Text, Light';
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+    align-self: flex-end;
+    position: fixed;
+}
+#web-name{
+    margin-left: 10px;
+}
+#link{
+    margin-left: 8px;
+}
+
+#Website:hover{
+    cursor: pointer;
+}
+
+#minimal-footer{
+    background: linear-gradient(to bottom,
+    #1E2536 0%, 
+    #191919 100%);
+    height: 380px;
+}
+
+#web-branding{
+    padding-top: 3%;
+    display: flex;
+    font-family: 'SF Pro Text';
+}
+
+#footer-logo{
+    margin-left: 6%;
+    width: 55px;
+}
+#brand-name{
+    margin-left: 1%;
+    font-size: 210%;
+    color: #E4E4E4;
+}
+
+#Text-3{
+    margin-top: 1%;
+    padding-left: 6%;
+    font-family: 'SF Pro Text, Light';
+    color: #E4E4E4;
+}
+#line-1{
+    display: flex;
+}
+#part-1, #part-2, #part-3{
+    display: flex;
+    align-items: center;
+}
+#part-2{
+    margin-left: 2px;
+    margin-right: 2px;
+}
+#Text-4{
+    margin-top: 1%;
+    padding-left: 6%;
+    font-family: 'SF Pro Text, Light';
+    color: #AEAEAE;
+    font-size: 12px;
+}
+
+#Social{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.25);
+    width: 130px;
+    margin-left: 5.6%;
+    margin-top: 1.5%;
+    margin-bottom: 1%;
+    border-radius: 50px;
+    height: 42px;
+}
+
+#git, #ln, #ig{
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#git{
+    margin-left: 5px;
+    margin-top: 2.5px;
+}
+#git:hover{
+    background-color: #262626;
+    transition: 0.5s ease-out;
+}
+#ln:hover{
+    background-color: #0A66C2;
+    transition: 0.5s ease-out;
+}
+#ig:hover{
+    background: linear-gradient(135deg, #6228d7, #ee2a7b, #f9ce34);
+    transition: 0.5s ease-out;
+}
+
+#ln,#ig{
+    margin-top: 2.5px;
+    margin-left: 6px;
+}
+
+#seperator{
+    margin-top: 20px;
+    margin-left: 5.6%;
+    max-width: 89%;
+}
+#bottom-text{
+    font-family: 'SF Pro Text, Light';
+    display: flex;
+    margin-left: 5.2%;
+    margin-top: 1%;
+    color: #AEAEAE;
+    font-size: 11.5px;
+}
+
+#API{
+    display: flex;
+    margin-left:958px;
+}
+
+
+#api-link{
+    color: #AEAEAE;
+    text-decoration: none;
+}
+
+#api-link:hover{
+    text-decoration: underline;
+}
+
+#API-2{
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+#figma{
+    margin-left: 40px;
+}
+
+#figma-link{
+    color: #aeaeae;
+    text-decoration: none;
+}
+
+#figma-link:hover{
+    text-decoration: underline;
+}
+
+.food-card{
+    margin-top: 80px;
+    width: 255px;
+    background-color: rgba(255, 255, 255, 0.25);
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+}
+#food-card-inner:hover{
+    cursor: pointer;
+}
+
+#food-card-inner{
+    height: 300px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 220px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.71);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#generated{
+    margin-top: 15px;
+    width: 188px;
+    height: 188px;
+    border-radius: 50px;
+    opacity: 0.8;
+    z-index: 1;
+    filter: blur(8px);
+}
+
+#real-image{
+    height: 10px;
+}
+
+#random-meal-text{
+    background-color: white;
+    color: #121212;
+    font-family: 'SF Pro Text';
+    border-radius: 50px;
+    width: 190px;
+    padding: 14px;
+    font-size: 11px;
+}
+
+#generated-1{
+    width: 180px;
+    height: 180px;
+    border-radius: 50px;
+    z-index: 2;
+    transform:translateY(-189px);
+}
+
+#jkl{
+    margin: 0px 0px 0px 350px;
+    font-size: 22px;
+}
+
+#qwerty{
+    font-size: 100px;
+    padding: 14px;
+    border-radius: 12px;
+    color: #e4e4e4;
+    font-family: 'SF Pro Display';
+}
+
+.randomDiv{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    background-color: #1E2536;
+}
+
+.randomDiv h1{
+    padding-top: 10vh;
+    padding-right: 10vh;
+}
+
+#searched-food{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#searched-food .food-card{
+    margin: 5vh;
+}
+
+.search-button-Div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ingredeints{
+    width: 40vh;
+    height: fit-content;
+    text-align: center;
+    border: 2px solid grey;
+    box-shadow: 0 0 4px gray;
+    border-radius: 1vh;
+    background-color: white;
+    cursor: pointer;
+    animation: popup 0.5s;
+}
+
+.ingredeintsDiv{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80%; 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.recipeDiv{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.showRecipe{
+    display: none;
+}
+
+.Recipe{
+    width: 25%;
+    height: fit-content;
+    text-align: center;
+    border: 2px solid grey;
+    box-shadow: 0 0 4px gray;
+    border-radius: 1vh;
+    background-color: white;
+    animation: popup 0.5s;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Recipe img{
+    width: 30%;
+}
+@keyframes popup{
+    from{
+        scale:0.5;
+    }
+    to{
+        scale: 1;
+    }
+}
+
+.hide{
+    display: none;
+}
+
+.searchedDiv h1{
+    text-align: center;
+    padding: 16px;
+    margin-top: 20px;
+}
+
+.navbar{
+    width: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    height: 7vh;
+    margin: 6.5vh;
+}
+
+.introbox{
+    height: 40vh;
+    background-color: #722f19a1;
+    color: white;
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20%;
+}
+
+.foodimg{
+    width: 60vh;
+    margin-bottom:0 ;
+}
+
+.tagline{
+    font-size: 10vh;
+    padding-top: 5vh;
+    font-family: 'Irish Grover', cursive;
+}

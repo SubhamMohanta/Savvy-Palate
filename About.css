@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('./assets/TrueType/SFProDisplay-Bold.ttf');
+}
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url('./assets/TrueType/SFProDisplay-SemiBold.ttf');
+}
+
+body{
+    background-color: rgb(41, 41, 71);
+}
+
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#box{
+    width: 30%;
+}
+
+#Head{
+    font-family: 'SF Pro Display';
+    text-align: center;
+}
+
+#Title{
+    font-family: 'SF Pro Text';
+    text-align: justify;
+}
